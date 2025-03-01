@@ -1,0 +1,120 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 180vh;
+    width: 100%;
+    overflow-y: auto;
+    text-transform: capitalize;
+  }
+
+.test-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); 
+    /* background: var(--background-color, #f9f9f9); */
+    padding: 40px 0; /* Keeps padding without overflow */
+    transition: background 0.3s ease;
+  }
+  
+  .test-box {
+    width: 80vw; /* Increased width */
+    max-width: 800px; /* Ensuring it doesn’t get too large */
+    padding: 30px;
+    background: var(--box-color, white);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-family: 'Gilroy', sans-serif;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--text-color, #333);
+  }
+  
+  /* Input Styling */
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 3vh;
+    color: var(--text-color, #333);
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--input-bg, #fff);
+    color: var(--text-color, #333);
+    transition: 0.3s;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Button Styling */
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Light/Dark Theme Support */
+  .dark-mode .test-container {
+    --background-color: #1a1a1a;
+    --box-color: #2a2a2a;
+    --text-color: #f1f1f1;
+    --input-bg: #333;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .test-box {
+      width: 90vw;
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .test-box {
+      width: 95vw;
+      padding: 18px;
+    }
+  }
+  
+
+#test-result{
+  color: black;
+  margin-top: 2vh;
+  font-size: 3vh;
+}  
